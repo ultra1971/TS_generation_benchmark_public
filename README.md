@@ -1,6 +1,9 @@
 # Time Series Generation Benchmark
 
-This code provides a tool to generate synthetic time series using some of the most common techniques. The sources of the codes used are listed [here](#sources)
+This code provides a tool to generate synthetic time series using some of the most common techniques. The sources of the codes used are listed [here](#sources)  
+
+## This repository only contains the sharable (public) part of the code. Since the concatenation tool to reconstruct the results of GANs is absent, the code might not work properly with GAN-based generations
+
 
 [**Prerequisites**](#prerequisites) | [**Build**](#build) | [**Execution**](#execution) | [**Results**](#results) | [**Examples**](#execution-examples) | [**Plot metrics**](#plot-metrics) | [**BasicGAN 3072 Note**](#basicgan-3072-note) | [**Sources**](#sources) | [**Datasets form**](#datasets-form)
 ___
