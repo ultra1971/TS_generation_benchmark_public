@@ -1,0 +1,50 @@
+{
+    "algorithm": [
+        "TimeGAN"
+    ],
+    "_possible_algorithms": [
+        "DBA",
+        "AnomaliesInjection",
+        "InfoGAN",
+        "TimeGAN",
+        "AR",
+        "BasicGAN3072"
+    ],
+    "dataset": "datasets/Original_Data/BeetleFly_TEST.csv",
+    "length": 0,
+    "nb_series": 0,
+    "nb_epochs": 200,
+    "batch_size": 24,
+    "Kalman_filter": 1,
+    "Compute_metrics": 1,
+    "Show_plot": 0,
+    "_possible_datasets": [
+        "datasets/Original_Data/BeetleFly_TEST.csv",
+        "datasets/Original_Data/Coffee_TEST.csv",
+        "datasets/Original_Data/Ham_TEST.csv",
+        "datasets/Original_Data/Lighting7_TEST.csv",
+        "datasets/Original_Data/Currency2.csv",
+        "datasets/Original_Data/Alabama_weather_6k_8k.csv"
+    ],
+    "AR_lag_window": 100,
+    "TimeGAN_seq_len": 24,
+    "Kalman_remove_initial": 0,
+    "AnomaliesInjection_nb_modifications": -1,
+    "AnomaliesInjection_multiple_modification_per_ts": 1,
+    "AnomaliesInjection_seed": 123456789,
+    "AnomaliesInjection_max_nb_extreme": 5,
+    "AnomaliesInjection_min_shift": 20,
+    "AnomaliesInjection_max_shift": 80,
+    "AnomaliesInjection_min_trend": 20,
+    "AnomaliesInjection_max_trend": 80,
+    "AnomaliesInjection_min_variance": 20,
+    "AnomaliesInjection_max_variance": 80,
+    "AnomaliesInjection_extreme_factor": 5,
+    "AnomaliesInjection_shift_factor": 5,
+    "AnomaliesInjection_trend_factor": 1,
+    "AnomaliesInjection_variance_factor": 15,
+    "AnomaliesInjection_probability_extreme": 0,
+    "AnomaliesInjection_probability_shift": 0,
+    "AnomaliesInjection_probability_trend": 0,
+    "AnomaliesInjection_probability_variance": 0
+}

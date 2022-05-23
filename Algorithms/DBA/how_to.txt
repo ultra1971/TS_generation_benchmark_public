@@ -1,0 +1,18 @@
+Compile everything with 
+
+		javac -cp commons-math3-3.6.1/commons-math3-3.6.1.jar TimeSeriesGenerator.java Tools.java Dba.java 
+
+
+To run the code, "java Dba XXXX", where XXXX is the path to a dataset
+
+The dataset should be a ".csv" file with time series in the rows. The first element of each row is a number indicating the class of the time series.
+The class number has no impact on the code, it's just a survival from when the code was used with UCR datasets. 
+
+
+
+TODO:
+
+	- allow to read ","-separated files, with time series in the columns
+	- ev. allow to specify output path, or at least make it more completed (create new package for each ts name, include the size in the output name, ...)
+	- allow more parameters, such as generated ts length, ...
+	- allow parameter to generate same number of ts as existing ones
