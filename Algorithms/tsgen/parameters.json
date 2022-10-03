@@ -3,7 +3,7 @@
     "sampling_size": 0,
     "batch_size_train": 24,
     "input_data_path": [
-        "../../datasets/Original_Data/BeetleFly_TEST.csv"
+        "../../datasets/Original_Data/currencies3.csv"
     ],
     "model_path": "model/train/",
     "winShift": [

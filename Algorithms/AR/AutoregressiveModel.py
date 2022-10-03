@@ -11,7 +11,7 @@ def main(args):
 	# Collect generated data
 	generated = []
 	# Choose lag window
-	lag_win = int(len(data.iloc[:,0])/4) if args.lag_window is 0 else args.lag_window
+	lag_win = int(len(data.iloc[:,0])/4) if args.lag_window == 0 else args.lag_window
 	for s in range(len(data.columns)):
 		X = tuple(data.iloc[:,s])   # AutoReg do not like dataframes.. cast it to tuple to remove warnings
 		# train autoregression

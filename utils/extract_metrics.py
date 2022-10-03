@@ -26,7 +26,7 @@ def main(args):
 	else:
 		generated_df = generated_df_not_norm
 	# MI accepts only integers. 
-	precision = 1e5
+	precision = 100000
 	original_df_int = (original_df * precision).astype('int64')
 	generated_df_int = (generated_df * precision).astype('int64')
 	original_df_corrected_int = (original_df_corrected * precision).astype('int64')
@@ -151,7 +151,8 @@ def normalize_0_1(series):
         # normalize the dataset and print the first 5 rows
         normalized.loc[:,col] = scaler.transform(values).tolist()
     # First columns appears to have elements in a single-value array...
-    normalized.iloc[:,0] = [x[0] for x in normalized.iloc[:,0]]
+    for col in range(len(normalized.columns)):
+        normalized.iloc[:,col] = [x[0] for x in normalized.iloc[:,col]]
     return normalized
     
     
@@ -167,8 +168,8 @@ if __name__ == "__main__":
 
 	parser = argparse.ArgumentParser()
 
-	parser.add_argument('--original', type=str, default="datasets/Original_Data/Coffee_TEST.csv", help='Path to the original dataset')
-	parser.add_argument('--generated', type=str, default="results/DBA/Coffee_TEST/Coffee_TEST.csv", help='Path to the generated dataset')
+	parser.add_argument('--original', type=str, default="../datasets/Original_Data/Currency2.csv", help='Path to the original dataset')
+	parser.add_argument('--generated', type=str, default="../results/Currency2/data/Currency2_AnomaliesInjection.csv", help='Path to the generated dataset')
 	parser.add_argument('--normalized_gen', type=int, default=0, help='Wether or not the generated data is normalized between 0 and 1')
 	parser.add_argument('--output_path', type=str, default=None, help='Path to the metrics file')
 	parser.add_argument('--algo', type=str, default="NotSpecifiedAlgo", help='The algorithm considered')

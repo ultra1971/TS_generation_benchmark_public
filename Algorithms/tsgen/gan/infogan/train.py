@@ -18,7 +18,7 @@ def main(input_data_path, model_path, shift, num_cont, max_epo, tr_sampling_size
         def __init__(self, batch_size=128, path='datasets/bafu.csv', window=120):
             # load data
             try:
-                df = pd.read_csv(path, delimiter=',', header=None, nrows = tr_sampling_size)
+                df = pd.read_csv(path, delimiter=',', header=0, nrows = tr_sampling_size)
                 # x = np.genfromtxt(path, delimiter=',', dtype=np.float32)
                 x = df.to_numpy()
 
